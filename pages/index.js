@@ -1,7 +1,17 @@
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import WhatsappButton from "../components/WhatsappButton";
+
 export default function Home() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
-      <h1 className="text-5xl font-bold">Hello, Vanthuir Maia 🚀</h1>
-    </div>
+    <>
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <WhatsappButton />
+    </>
   );
 }
