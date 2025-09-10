@@ -1,84 +1,52 @@
-export default function Projects() {
-  const projetos = [
-    {
-      titulo: "Análise de Dados do FIES 2021 - UFRPE",
-      descricao:
-        "Projeto de análise de dados do Fundo de Financiamento Estudantil, utilizando Python, Pandas e visualização com Matplotlib.",
-      stack: ["Python", "Pandas", "Matplotlib"],
-      link: "https://github.com/VanthuirMaia", // ajuste com link real
-      imagem: "/projetos/fies.png", // coloque no /public/projetos
-    },
-    {
-      titulo: "ERP Compras (Django)",
-      descricao:
-        "Sistema de gestão de solicitações e pedidos, desenvolvido com Django Rest Framework e PostgreSQL.",
-      stack: ["Django", "PostgreSQL", "DRF"],
-      link: "https://github.com/VanthuirMaia",
-      imagem: "/projetos/erp.png",
-    },
-    {
-      titulo: "MiRoute",
-      descricao:
-        "Plataforma para controle de qualidade e rastreabilidade de leite, com foco em análise de dados e logística.",
-      stack: ["Django", "Flutter", "PostgreSQL"],
-      link: "https://github.com/VanthuirMaia",
-      imagem: "/projetos/miroute.png",
-    },
-  ];
+const projetos = [
+  {
+    slug: "erp",
+    titulo: "ERP Compras (Axio)",
+    descricao:
+      "Sistema em Django para gestão de solicitações, pedidos, fornecedores e aprovações.",
+    imagem: "/projetos/erp1.png",
+  },
+  {
+    slug: "fies",
+    titulo: "Análise de Dados do SISTEC - Escolas Técnicas",
+    descricao:
+      "Exploração de dados do SISTEC utilizando Python, Pandas e visualização com Matplotlib.",
+    imagem: "/projetos/fies.png",
+  },
+  {
+    slug: "miroute",
+    titulo: "MiRoute",
+    descricao:
+      "Solução para rastreabilidade e controle de qualidade do leite, integrando análise de dados e APIs.",
+    imagem: "/projetos/miroute.png",
+  },
+];
 
+export default function Projects() {
   return (
-    <section
-      id="projetos"
-      className="py-20 bg-gray-900 text-gray-100 px-6 md:px-20"
-    >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-10 text-center">
-          Meus <span className="text-green-500">Projetos</span>
-        </h2>
+    <section id="projetos" className="py-20 bg-[#0f0f0f] text-white">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold mb-12">Projetos</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {projetos.map((projeto, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform"
+              className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-green-500/30 transition"
             >
-              {/* Imagem */}
               <img
                 src={projeto.imagem}
                 alt={projeto.titulo}
-                className="w-full h-40 object-cover"
+                className="rounded mb-4 w-full h-40 object-cover"
               />
-
-              {/* Conteúdo */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {projeto.titulo}
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  {projeto.descricao}
-                </p>
-
-                {/* Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {projeto.stack.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="bg-gray-700 text-green-400 px-3 py-1 rounded-full text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Link */}
-                <a
-                  href={projeto.link}
-                  target="_blank"
-                  className="text-green-400 font-medium hover:underline"
-                >
-                  Ver mais →
-                </a>
-              </div>
+              <h3 className="text-xl font-semibold mb-2">{projeto.titulo}</h3>
+              <p className="text-gray-400 mb-4">{projeto.descricao}</p>
+              <a
+                href={`/projetos/${projeto.slug}`}
+                className="text-green-400 hover:text-green-300"
+              >
+                Ver Projeto →
+              </a>
             </div>
           ))}
         </div>

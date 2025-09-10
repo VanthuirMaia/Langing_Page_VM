@@ -1,0 +1,87 @@
+import { useState } from "react";
+import Link from "next/link";
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md z-50">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo / Nome */}
+        <Link href="/#hero" className="text-xl font-bold text-green-500">
+          VM
+        </Link>
+
+        {/* Links desktop */}
+        <div className="hidden md:flex gap-6 items-center">
+          <Link
+            href="/#hero"
+            className="text-gray-200 hover:text-green-400 transition"
+          >
+            Home
+          </Link>
+          <Link
+            href="/#about"
+            className="text-gray-200 hover:text-green-400 transition"
+          >
+            Sobre
+          </Link>
+          <Link
+            href="/#projetos"
+            className="text-gray-200 hover:text-green-400 transition"
+          >
+            Projetos
+          </Link>
+          <Link
+            href="/#contact"
+            className="text-gray-200 hover:text-green-400 transition"
+          >
+            Contato
+          </Link>
+        </div>
+
+        {/* Botão hambúrguer mobile */}
+        <button
+          className="md:hidden text-2xl text-gray-200"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <i className={`bi ${menuOpen ? "bi-x" : "bi-list"}`}></i>
+        </button>
+      </div>
+
+      {/* Menu mobile */}
+      {menuOpen && (
+        <div className="md:hidden bg-black/90 px-6 py-4 flex flex-col gap-4 text-center">
+          <Link
+            href="/#hero"
+            className="text-gray-200 hover:text-green-400 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/#about"
+            className="text-gray-200 hover:text-green-400 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sobre
+          </Link>
+          <Link
+            href="/#projetos"
+            className="text-gray-200 hover:text-green-400 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Projetos
+          </Link>
+          <Link
+            href="/#contact"
+            className="text-gray-200 hover:text-green-400 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contato
+          </Link>
+        </div>
+      )}
+    </nav>
+  );
+}
