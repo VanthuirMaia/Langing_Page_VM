@@ -20,6 +20,13 @@ const projetos = [
       "Solução para rastreabilidade e controle de qualidade do leite, integrando análise de dados e APIs.",
     imagem: "/projetos/miroute.png",
   },
+  {
+    slug: "etl_dof",
+    titulo: "ETL Transporte Florestal (DOF)",
+    descricao:
+      "Pipeline de ETL que processa dados do IBAMA (JSON → CSV) para análise de transportes florestais.",
+    imagem: "/projetos/etl-dof1.png",
+  },
 ];
 
 export default function Projects() {
