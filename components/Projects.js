@@ -27,6 +27,13 @@ const projetos = [
       "Pipeline de ETL que processa dados do IBAMA (JSON → CSV) para análise de transportes florestais.",
     imagem: "/projetos/etl-dof1.png",
   },
+  {
+    slug: "webscraping",
+    titulo: "🕸️ Web Scraping com Python",
+    descricao:
+      "Extração, tratamento e visualização de dados da web utilizando Scrapy, Pandas e Streamlit.",
+    imagem: "/projetos/webscraping1.png",
+  },
 ];
 
 export default function Projects() {
