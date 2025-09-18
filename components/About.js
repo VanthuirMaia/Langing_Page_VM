@@ -1,3 +1,9 @@
+import {
+  AcademicCapIcon,
+  BriefcaseIcon,
+  RocketLaunchIcon,
+} from "@heroicons/react/24/solid";
+
 export default function About() {
   return (
     <section
@@ -5,98 +11,83 @@ export default function About() {
       className="py-20 bg-gray-950 text-gray-200 px-6 md:px-20"
     >
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">
+        <h2 className="text-3xl font-bold text-white mb-12">
           Sobre <span className="text-green-500">Mim</span>
         </h2>
 
-        <p className="mb-4">
+        {/* Resumo curto */}
+        <p className="mb-12 text-lg text-gray-300 max-w-3xl mx-auto">
           Sou <span className="text-green-400 font-medium">Vanthuir Maia</span>,{" "}
-          profissional apaixonado por tecnologia e inovação, com atuação focada
-          em{" "}
+          <span className="text-green-400 font-medium">
+            Residente em IA Generativa
+          </span>{" "}
+          pela UPE. Minha trajetória combina{" "}
           <span className="text-green-400 font-medium">
             Engenharia de Dados
           </span>
+          , <span className="text-green-400 font-medium">Ciência de Dados</span>
           , <span className="text-green-400 font-medium">Machine Learning</span>{" "}
           e{" "}
           <span className="text-green-400 font-medium">
             Desenvolvimento Backend
           </span>
-          .
+          . Atualmente, avalio apenas projetos freelancers de forma pontual, em
+          paralelo à residência.
         </p>
 
-        <p className="mb-4">
-          Atualmente, sou{" "}
-          <span className="text-green-400 font-medium">
-            Mestrando em Engenharia da Computação
-          </span>{" "}
-          (UPE), com pesquisa voltada para{" "}
-          <span className="text-green-400 font-medium">
-            Inteligência Artificial e Data Science
-          </span>
-          . Além disso, possuo a{" "}
-          <span className="text-green-400 font-medium">
-            Especialização em Tomada de Decisão Baseada em Evidências
-          </span>{" "}
-          (UFRPE), que me permite aplicar dados de forma estratégica em
-          políticas públicas e no setor privado.
-        </p>
+        {/* Cards organizados */}
+        <div className="grid md:grid-cols-3 gap-8 text-left">
+          {/* Card Atualidade */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-green-500/30 transition flex flex-col">
+            <RocketLaunchIcon className="h-10 w-10 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-3">Hoje</h3>
+            <ul className="space-y-2 text-gray-400 text-sm leading-relaxed">
+              <li>📌 Residente em IA Generativa (UPE)</li>
+              <li>📌 Dedicação exclusiva a pesquisa em IA aplicada</li>
+              <li>
+                📌 Ênfase em Data Science, Engenharia de Dados, Análise de Dados
+                e IA Generativa
+                <span className="block text-gray-500 text-xs ml-6">
+                  (Machine Learning, Deep Learning, DataViz, PLN, Visão
+                  Computacional, entre outros)
+                </span>
+              </li>
 
-        <p className="mb-4">
-          Estou concluindo também a{" "}
-          <span className="text-green-400 font-medium">
-            Especialização em Engenharia de Dados
-          </span>{" "}
-          pela Jornada de Dados, aprofundando meu domínio em{" "}
-          <span className="text-green-400 font-medium">
-            Python, SQL, Airflow, DBT, Databricks, Docker e Cloud (AWS, GCP e
-            Azure)
-          </span>
-          . Essa formação complementa minha expertise em{" "}
-          <span className="text-green-400 font-medium">
-            pipelines de dados, APIs RESTful e automação de processos
-          </span>
-          .
-        </p>
+              <li>📌 Avalio apenas projetos freelancers pontuais</li>
+            </ul>
+          </div>
 
-        <p className="mb-4">
-          Minha trajetória combina ensino, pesquisa e prática no mercado,
-          passando por{" "}
-          <span className="text-green-400 font-medium">startups</span>, projetos
-          acadêmicos e consultoria em dados. Meu objetivo é transformar{" "}
-          <span className="text-green-400 font-medium">
-            dados em decisões estratégicas
-          </span>
-          , sempre buscando impacto real nos negócios e na sociedade.
-        </p>
+          {/* Card Formação */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-green-500/30 transition flex flex-col">
+            <AcademicCapIcon className="h-10 w-10 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-3">Formação</h3>
+            <ul className="space-y-2 text-gray-400 text-sm leading-relaxed">
+              <li>🎓 Mestrado em Engenharia da Computação (UPE)</li>
+              <li>🎓 Esp. Tomada de Decisão Baseada em Evidências (UFRPE)</li>
+              <li>🎓 Esp. Engenharia de Dados (Jornada de Dados)</li>
+              <li>🎓 Tecnólogo em ADS (UNITINS)</li>
+              <li>🎓 Técnico em ADS (ETE Ariano Vilar Suassuna)</li>
+            </ul>
+          </div>
 
-        <p className="mb-6">
-          Minha experiência profissional inclui atuação como{" "}
-          <span className="text-green-400 font-medium">
-            Supervisor de Almoxarifado
-          </span>{" "}
-          no setor de logística da construção civil,{" "}
-          <span className="text-green-400 font-medium">
-            Técnico em Fibra Óptica
-          </span>{" "}
-          na SEREDE (Oi), e{" "}
-          <span className="text-green-400 font-medium">
-            Técnico em Service Desk
-          </span>{" "}
-          na Positivo Tecnologia. Atualmente, sou{" "}
-          <span className="text-green-400 font-medium">
-            Instrutor de Tecnologia no SENAC PE
-          </span>
-          , ministrando aulas em{" "}
-          <span className="text-green-400 font-medium">
-            Desenvolvimento Web
-          </span>
-          , <span className="text-green-400 font-medium">Banco de Dados</span> e{" "}
-          <span className="text-green-400 font-medium">
-            Operação de Sistemas
-          </span>
-          . Essa diversidade de experiências me permite unir visão técnica,
-          acadêmica e prática em cada projeto que desenvolvo.
-        </p>
+          {/* Card Experiência */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-green-500/30 transition flex flex-col">
+            <BriefcaseIcon className="h-10 w-10 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-3">Experiências</h3>
+            <ul className="space-y-2 text-gray-400 text-sm leading-relaxed">
+              <li>💼 Instrutor de Tecnologia — SENAC (2024 - 2025)</li>
+              <li>💼 Técnico de Informática — Positivo Tecnologia (2024)</li>
+              <li>
+                💼 Técnico em Telecomunicações — SEREDE / Oi (2020 – 2022)
+              </li>
+              <li>
+                💼 Supervisor de Almoxarifado — PATROL / JVICENTE / AUGÚRIO
+                (2009 – 2020)
+              </li>
+              <li>💼 Projetos acadêmicos e startups em dados</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

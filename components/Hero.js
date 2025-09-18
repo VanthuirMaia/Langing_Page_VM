@@ -6,12 +6,16 @@ export default function Hero() {
     const typed = new Typed(".typed-text", {
       strings: [
         "Engenharia de Dados",
+        "Data Science",
+        "IA Generativa",
         "Análise de Dados",
         "Backend Developer",
-        "Automação de Processos",
+        "Automação de Processos e Serviços",
       ],
-      typeSpeed: 50,
-      backSpeed: 25,
+      typeSpeed: 80, // mais lento na digitação
+      backSpeed: 40, // velocidade ao apagar
+      backDelay: 1500, // pausa antes de apagar
+      startDelay: 500, // pequena pausa inicial
       loop: true,
     });
 
